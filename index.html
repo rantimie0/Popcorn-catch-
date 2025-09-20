@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Popcorn Catch</title>
+  <meta name="theme-color" content="#0b0b0b"/>
+  <link rel="manifest" href="manifest.webmanifest"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>🍿 Popcorn Catch</h1>
+    <nav>
+      <button id="btnInstall" class="chip">Install</button>
+      <button id="btnHow" class="chip">How to play</button>
+    </nav>
+  </header>
+
+  <main>
+    <canvas id="game" width="360" height="600" aria-label="Game canvas"></canvas>
+    <div class="hud">
+      <div><strong>Score:</strong> <span id="score">0</span></div>
+      <div><strong>Best:</strong> <span id="best">0</span></div>
+      <div><strong>Lives:</strong> <span id="lives">3</span></div>
+    </div>
+
+    <div class="controls">
+      <button id="left" aria-label="Move left">◀</button>
+      <button id="pause" aria-label="Pause/Resume">⏯</button>
+      <button id="right" aria-label="Move right">▶</button>
+    </div>
+
+    <div class="cta-row">
+      <button id="btnShare" class="primary">Share score</button>
+      <a id="btnWA" class="link" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+    </div>
+  </main>
+
+  <dialog id="how">
+    <h2>How to play</h2>
+    <p>Move the bucket to <b>catch popcorn</b> and avoid the <b>burnt kernels</b>!</p>
+    <ul>
+      <li>Tap ◀ ▶ or swipe</li>
+      <li>3 lives. Missed popcorn or catching burnt kernels loses a life.</li>
+      <li>It gets faster over time. Good luck 😘</li>
+    </ul>
+    <button id="closeHow" class="primary">Start</button>
+  </dialog>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Jade Games • Built with 💛</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

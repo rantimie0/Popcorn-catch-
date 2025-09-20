@@ -1,0 +1,16 @@
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:#0b0b0b;color:#eee;display:flex;flex-direction:column}
+header{position:sticky;top:0;background:#000;border-bottom:1px solid #161616;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;z-index:10}
+h1{margin:0;font-size:18px}
+nav{display:flex;gap:8px}
+.chip{background:#111;border:1px solid #222;color:#eee;padding:6px 10px;border-radius:999px}
+main{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px}
+canvas{background:linear-gradient(#111,#191919);border:1px solid #222;border-radius:14px;touch-action:none}
+.hud{display:flex;gap:16px;align-items:center}
+.controls{display:flex;gap:12px}
+.controls button{font-size:24px;line-height:24px;padding:12px 18px;border-radius:12px;border:1px solid #333;background:#151515;color:#fff}
+.cta-row{display:flex;gap:12px;align-items:center;margin-top:6px}
+.primary{background:#ffffff;color:#111;border:none;border-radius:10px;padding:10px 14px}
+.link{color:#9adcff;text-decoration:underline}
+dialog{border:1px solid #333;background:#0f0f0f;color:#eee;border-radius:12px;padding:16px;max-width:420px}
+footer{padding:16px;text-align:center;color:#888}
+@media (min-width:400px){ canvas{width:360px;height:600px} }
