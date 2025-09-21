@@ -1,1 +1,21 @@
-body{background:#111;color:#eee;font-family:sans-serif;}
+*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;color:#eee;display:flex;flex-direction:column;background:#06060a}
+header{position:sticky;top:0;background:#000;border-bottom:1px solid #161616;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;z-index:10}
+h1{margin:0;font-size:18px}.plus{color:#ffea00;font-weight:700}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:#111;border:1px solid #222;color:#eee;padding:6px 10px;border-radius:999px}
+main{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px}
+canvas{border:1px solid #222;border-radius:14px;touch-action:none;background:#0b0b0b}
+.hud{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.cta-row{display:flex;gap:12px;align-items:center;margin-top:6px}
+.primary{background:#ffffff;color:#111;border:none;border-radius:10px;padding:10px 14px}
+.link{color:#9adcff;text-decoration:underline}
+dialog{border:1px solid #333;background:#0f0f0f;color:#eee;border-radius:12px;padding:16px;max-width:420px}
+footer{padding:16px;text-align:center;color:#888}
+.gem{display:flex;align-items:center;gap:6px;background:#151515;border:1px solid #2a2a2a;padding:4px 8px;border-radius:999px}
+.lvl{background:#151515;border:1px solid #2a2a2a;padding:4px 8px;border-radius:999px}
+.shop{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.buy{background:#151515;color:#eee;border:1px solid #2a2a2a;border-radius:12px;padding:10px;text-align:left}
+.skins{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.skin{background:#151515;color:#eee;border:1px solid #2a2a2a;border-radius:12px;padding:10px;text-align:left}
+@media (min-width:400px){ canvas{width:360px;height:600px} }

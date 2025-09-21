@@ -1,1 +1,89 @@
-<!DOCTYPE html><html><body><h1>Popcorn Catch PLUS</h1><p>Game files are here!</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Popcorn Catch PLUS</title>
+  <meta name="theme-color" content="#0b0b0b"/>
+  <link rel="manifest" href="manifest.webmanifest"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>🍿 Popcorn Catch <span class="plus">PLUS</span></h1>
+    <nav>
+      <button id="btnInstall" class="chip">Install</button>
+      <button id="btnHow" class="chip">How to play</button>
+      <button id="btnStore" class="chip">Store</button>
+      <button id="btnSkins" class="chip">Skins</button>
+      <button id="btnMute" class="chip">🔊</button>
+    </nav>
+  </header>
+
+  <main>
+    <canvas id="game" width="360" height="600" aria-label="Game canvas"></canvas>
+
+    <div class="hud">
+      <div><strong>Score:</strong> <span id="score">0</span></div>
+      <div><strong>Best:</strong> <span id="best">0</span></div>
+      <div><strong>Lives:</strong> <span id="lives">5</span></div>
+      <div class="gem"><span>💎</span> <b id="gems">0</b></div>
+      <div class="lvl"><strong>Lv</strong> <span id="level">1</span></div>
+    </div>
+
+    <div class="cta-row">
+      <button id="pause" class="primary">⏯</button>
+      <button id="btnShare" class="primary">Share score</button>
+      <a id="btnWA" class="link" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+    </div>
+  </main>
+
+  <dialog id="how">
+    <h2>How to play</h2>
+    <p>Slide your finger/mouse to move the bucket. Catch <b>food</b>, avoid <b>burnt</b> kernels. Background changes every few levels 🌈.</p>
+    <ul>
+      <li>⭐ Double points (8s)</li>
+      <li>🕑 Slow-mo (6s)</li>
+      <li>🛡️ Shield (blocks one hit)</li>
+      <li>💎 Earn gems: +1 every 10 points (boosted by some skins)</li>
+    </ul>
+    <button id="closeHow" class="primary">Start</button>
+  </dialog>
+
+  <dialog id="store">
+    <h2>Store</h2>
+    <p>Gems: <b id="gemsStore">0</b> 💎</p>
+    <div class="shop">
+      <h3>Permanent Upgrades</h3>
+      <button class="buy" data-key="perm_bigBucket" data-cost="30">🪣 Bigger Bucket (30💎)</button>
+      <button class="buy" data-key="perm_slowStart" data-cost="30">🐢 Slow Start (30💎)</button>
+      <button class="buy" data-key="perm_extraLife" data-cost="80">❤️ +1 Max Life (80💎)</button>
+      <h3>Start Power-Ups</h3>
+      <button class="buy" data-key="start_star" data-cost="20">⭐ Start with Double Points (20💎)</button>
+      <button class="buy" data-key="start_clock" data-cost="20">🕑 Start with Slow-mo (20💎)</button>
+      <button class="buy" data-key="start_shield" data-cost="20">🛡️ Start with Shield (20💎)</button>
+    </div>
+    <small>Purchases save on your device.</small><br><br>
+    <button id="closeStore" class="primary">Close</button>
+  </dialog>
+
+  <dialog id="skins">
+    <h2>Skins</h2>
+    <p>Select a bucket skin (perks apply while selected):</p>
+    <div class="skins">
+      <button class="skin" data-id="classic">Classic — no perk</button>
+      <button class="skin" data-id="wide">Wide Bucket — +12px width</button>
+      <button class="skin" data-id="gemBoost">Gem Boost — gem every <b>8</b> points</button>
+      <button class="skin" data-id="coolStart">Cool Start — slower at level 1–2</button>
+    </div>
+    <small>Skins are free for now 💛</small><br><br>
+    <button id="closeSkins" class="primary">Close</button>
+  </dialog>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Jade Games • Built with 💛</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
